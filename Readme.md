@@ -9,6 +9,7 @@ Avant de commencer, assurez-vous que votre système est à jour en exécutant le
 ```bash
 sudo apt update
 sudo apt upgrade
+```
 
 ## Installation de net-tools
 
