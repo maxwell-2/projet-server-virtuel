@@ -1,6 +1,3 @@
-Bien sûr, voici le contenu que vous pouvez ajouter à un fichier `readme.md` pour documenter les étapes :
-
-```markdown
 # Guide d'installation et de configuration d'Apache2 et Git sur Ubuntu
 
 Ce guide vous montrera comment installer et configurer Apache2 sur un serveur Ubuntu, ainsi que comment cloner un dépôt Git et configurer un site web de base.
@@ -12,7 +9,6 @@ Avant de commencer, assurez-vous que votre système est à jour en exécutant le
 ```bash
 sudo apt update
 sudo apt upgrade
-```
 
 ## Installation de net-tools
 
@@ -70,20 +66,20 @@ Utilisez la commande suivante pour cloner un dépôt Git (remplacez `<url>` par 
 git clone <url>
 ```
 
-## Copie du dossier "gimmo" vers le répertoire Web d'Apache
+## Copie du dossier "nom-du-site" vers le répertoire Web d'Apache
 
-Pour copier un dossier appelé "gimmo" dans le répertoire Web d'Apache ("/var/www"), utilisez la commande suivante :
+Pour copier un dossier appelé "nom-du-site" dans le répertoire Web d'Apache ("/var/www"), utilisez la commande suivante :
 
 ```bash
-sudo cp -r gimmo /var/www
+sudo cp -r nom-du-site /var/www
 ```
 
 ## Configuration d'un site Apache2
 
-Créez un fichier de configuration pour votre site (gimmo.conf) dans le répertoire "/etc/apache2/sites-available". Vous pouvez utiliser l'éditeur de texte Nano pour ouvrir le fichier et y ajouter la configuration nécessaire :
+Créez un fichier de configuration pour votre site (nom-du-site.conf) dans le répertoire "/etc/apache2/sites-available". Vous pouvez utiliser l'éditeur de texte Nano pour ouvrir le fichier et y ajouter la configuration nécessaire :
 
 ```bash
-sudo nano /etc/apache2/sites-available/gimmo.conf
+sudo nano /etc/apache2/sites-available/nom-du-site.conf
 ```
 
 Assurez-vous de définir les directives `ServerName`, `ServerAdmin`, et `DocumentRoot` appropriées pour votre site.
@@ -93,7 +89,7 @@ Assurez-vous de définir les directives `ServerName`, `ServerAdmin`, et `Documen
 Activez le site Apache2 que vous venez de configurer en utilisant la commande suivante :
 
 ```bash
-sudo a2ensite gimmo.conf
+sudo a2ensite nom-du-site.conf
 ```
 
 ## Redémarrage d'Apache2
@@ -105,6 +101,3 @@ sudo systemctl restart apache2
 ```
 
 Cela devrait vous permettre d'installer Apache2, de cloner un dépôt Git, de copier un dossier dans le répertoire Web d'Apache, de configurer un site web, et de redémarrer Apache2 pour rendre votre site accessible en ligne.
-```
-
-Vous pouvez copier ce contenu dans un fichier `readme.md` à l'aide d'un éditeur de texte ou d'un IDE qui prend en charge les fichiers Markdown, puis le lire ou le partager selon vos besoins.
