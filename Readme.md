@@ -75,9 +75,17 @@ Pour copier un dossier appelé "nom-du-site" dans le répertoire Web d'Apache ("
 sudo cp -r nom-du-site /var/www
 ```
 
+## Création du fichier de configuration
+
+Créez un fichier de configuration pour votre site (nom-du-site.conf) dans le répertoire "/etc/apache2/sites-available" à partir des paramètres par défaut en utilisant la commande suivante :
+
+```bash
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/nom-du-site.conf
+```
+
 ## Configuration d'un site Apache2
 
-Créez un fichier de configuration pour votre site (nom-du-site.conf) dans le répertoire "/etc/apache2/sites-available". Vous pouvez utiliser l'éditeur de texte Nano pour ouvrir le fichier et y ajouter la configuration nécessaire :
+Utiliser l'éditeur de texte Nano pour ouvrir le fichier et y ajouter la configuration nécessaire :
 
 ```bash
 sudo nano /etc/apache2/sites-available/nom-du-site.conf
